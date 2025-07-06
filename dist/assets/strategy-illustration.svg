@@ -1,0 +1,36 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define gradients for the magnifying glass parts -->
+  <defs>
+    <linearGradient id="magnifierCircleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC371"/> <!-- Lighter shade of secondary -->
+      <stop offset="100%" stop-color="#D87A24"/> <!-- Secondary Color -->
+    </linearGradient>
+    <linearGradient id="magnifierHandleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00AEC0"/> <!-- Analogous Color 2 -->
+      <stop offset="100%" stop-color="#4831D4"/> <!-- Primary Color -->
+    </linearGradient>
+  </defs>
+
+  <!-- Magnifying Glass Ring -->
+  <circle cx="95" cy="95" r="80" fill="none" stroke="url(#magnifierCircleGradient)" stroke-width="30"/>
+  
+  <!-- Magnifying Glass Handle -->
+  <g transform="translate(135, 135) rotate(45)">
+      <rect x="0" y="-15" width="85" height="30" rx="15" fill="url(#magnifierHandleGradient)"/>
+  </g>
+
+  <!-- Checkmark inside the ring -->
+  <polyline
+    points="60,95 90,125 145,70"
+    fill="none"
+    stroke="white"
+    stroke-width="18"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Decorative floating squares -->
+  <rect x="180" y="20" width="15" height="15" rx="3" fill="#00AEC0" opacity="0.6"/>
+  <rect x="200" y="40" width="10" height="10" rx="2" fill="#4831D4" opacity="0.4"/>
+  <rect x="175" y="55" width="7" height="7" rx="1" fill="#00AEC0" opacity="0.5"/>
+</svg>

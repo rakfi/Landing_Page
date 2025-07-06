@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT Digital | We Crush Your Goals</title>
+    <!-- Link to Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Your Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#4831D4',
+              'secondary': '#D87A24',
+              'analogous-2': '#00AEC0',
+              'dark-dark': '#3AA888',
+              'text-main': '#272F2F',
+              'text-light': '#9C9991',
+              'accent-wizard': '#E2F2FE',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-white font-sans">
+
+    <!-- ======================= Header ======================= -->
+    <header class="bg-primary sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center p-4 text-white">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="./assets/logo.svg" alt="AT Digital Logo" class="w-8 h-8">
+                <span class="text-2xl font-bold">at digital</span>
+            </a>
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex items-center space-x-8">
+                <li><a href="#services" class="font-semibold hover:underline">SERVICES</a></li>
+                <li><a href="#" class="font-semibold hover:underline">ABOUT US</a></li>
+                <li><a href="#" class="font-semibold hover:underline">CONTACT US</a></li>
+                <li><a href="#" class="font-semibold hover:underline">CAREERS</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden z-50">
+                <img id="hamburger-icon" src="./assets/icon-hamburger.svg" alt="Open Menu" class="w-6 h-6">
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary text-white absolute top-0 left-0 w-full h-screen">
+            <ul class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">CAREERS</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= Hero Section ======================= -->
+        <section class="relative">
+            <div class="absolute inset-0 bg-black/30">
+                <img src="./assets/hero-background.jpg" alt="A modern workspace" class="w-full h-full object-cover mix-blend-overlay">
+            </div>
+            <div class="relative container mx-auto flex items-center min-h-[600px] px-4">
+                <div class="bg-gradient-to-br from-analogous-2/90 to-dark-dark/90 p-10 rounded-lg max-w-xl text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">We Crush Your Competitors, Goals, And Sales Records - Without The B.S.</h1>
+                    <button class="bg-secondary text-white font-bold py-3 px-6 mt-8 rounded-md hover:opacity-90 transition-opacity">GET FREE CONSULTATION</button>
+                </div>
+            </div>
+        </section>
+
+       <!-- ================================== -->
+<!--         Services Section           -->
+<!-- ================================== -->
+<section id="services" class="py-20">
+    <div class="container mx-auto px-4">
+        
+        <!-- 
+            THIS IS THE KEY CHANGE:
+            A new wrapper div with a max-width and auto-margin to center it.
+            This pulls the two columns closer together on large screens.
+        -->
+        <div class="max-w-6xl mx-auto space-y-24">
+            
+            <!-- Service 1: Web & Mobile App Development -->
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="w-full">
+                    <img src="./assets/web-dev-illustration.svg" alt="Web Development illustration">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Web & Mobile App Development</h2>
+                    <p class="text-text-main text-lg mb-6 leading-relaxed">Your web and mobile Apps are pieces of the puzzle to grow your business. We use frameworks which tailor content and engagement methods to respond to different intents shown by your potential customers who interact with your business online.</p>
+                    <a href="#" class="inline-block bg-secondary text-white font-bold py-2 px-5 rounded-md hover:opacity-90">LEARN MORE</a>
+                </div>
+            </div>
+
+            <!-- Service 2: Digital Strategy Consulting -->
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="w-full md:order-last">
+                    <img src="./assets/strategy-illustration.svg" alt="Digital Strategy illustration">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Digital Strategy Consulting</h2>
+                    <p class="text-text-main text-lg mb-6 leading-relaxed">Your digital strategy should complement the overall marketing strategy of the company. In online marketing, each component will never work in isolation and every business needs a holistic concept and strategic overview.</p>
+                    <a href="#" class="inline-block bg-secondary text-white font-bold py-2 px-5 rounded-md hover:opacity-90">LEARN MORE</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+        <!-- ======================= FAQ Section ======================= -->
+        <section id="faq" class="pb-20">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl font-bold text-primary mb-12 text-center">Frequently asked questions</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-accent-wizard p-5 rounded-lg overflow-hidden"><button class="faq-question w-full flex justify-between items-center text-left text-lg text-primary font-semibold"><span>Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?</span><span class="faq-icon text-2xl">−</span></button><div class="faq-answer mt-4 text-text-light"><p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p></div></div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-accent-wizard p-5 rounded-lg overflow-hidden"><button class="faq-question w-full flex justify-between items-center text-left text-lg text-primary font-semibold"><span>Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?</span><span class="faq-icon text-2xl">+</span></button><div class="faq-answer mt-4 text-text-light hidden"><p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p></div></div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-accent-wizard p-5 rounded-lg overflow-hidden"><button class="faq-question w-full flex justify-between items-center text-left text-lg text-primary font-semibold"><span>Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?</span><span class="faq-icon text-2xl">+</span></button><div class="faq-answer mt-4 text-text-light hidden"><p>Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.</p></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= Footer ======================= -->
+    <footer class="bg-primary text-white py-16">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <!-- Column 1 -->
+            <div class="space-y-4"><a href="#" class="flex items-center justify-center md:justify-start gap-2"><img src="./assets/logo.svg" alt="AT Digital Logo" class="w-8 h-8"><span class="text-2xl font-bold">at digital</span></a><p class="text-sm opacity-80">Your goal is our target. Not anything in between. We use online marketing platforms and tools to achieve single objective - your business results.</p></div>
+            <!-- Column 2 -->
+            <div class="space-y-4"><h3 class="text-lg font-bold">Our Technologies</h3><ul class="space-y-2 text-sm opacity-80"><li><a href="#" class="hover:underline">ReactJS</a></li><li><a href="#" class="hover:underline">Gatsby</a></li><li><a href="#" class="hover:underline">NextJS</a></li><li><a href="#" class="hover:underline">NodeJS</a></li></ul></div>
+            <!-- Column 3 -->
+            <div class="space-y-4"><h3 class="text-lg font-bold">Our Services</h3><ul class="space-y-2 text-sm opacity-80"><li><a href="#" class="hover:underline">Social Media Marketing</a></li><li><a href="#" class="hover:underline">Web & Mobile App Development</a></li><li><a href="#" class="hover:underline">Data & Analytics</a></li></ul></div>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
